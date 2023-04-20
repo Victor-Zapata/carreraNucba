@@ -1,0 +1,175 @@
+/* selectores */
+
+#selectorId {
+    color: #8c54fb;
+}
+
+.selectorClase {
+    color: red;
+}
+
+.selectorClaseP {
+    font-size: 2rem;
+    color: blue;
+    font-weight: 800;
+}
+
+.selectorClaseH5 {
+    color: chartreuse;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h4 {
+    color: aqua; 
+}
+
+
+.caja {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #6b7280;
+    margin-bottom: 20px;
+
+}
+
+.caja-mediana {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #e11d48;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.caja-grande {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #8c54fb;
+}
+
+/* unidades relativas */
+
+.em {
+    font-size: 2em;
+}
+
+.rem {
+    font-size: 2rem;
+}
+
+.porcentaje {
+    width: 50%;
+    height: 50%;
+    background-color: #8c54fb;
+}
+
+.vh {
+    height: 10vh;
+    background-color: #8c54fb;
+}
+
+.vw {
+    height: 10vw;
+    background-color: #8c54fb;
+}
+
+.bg-color {
+    background-color: crimson;
+}
+
+.bg-img {
+    background-image: url('./img/bg-pattern.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-repeat {
+    background-image: url('./img/bg-repeat.png');
+    background-repeat: repeat;
+}
+
+.bg-attach {
+    background-image: url('./img/bg-pattern.jpg');
+    background-attachment: fixed;
+}
+
+.bg-position {
+    background-image: url('./img/bg-pattern.jpg');
+    background-size: contain;
+    background-position: center;
+
+}
+
+.bg-size {
+    background-image: url('./img/messi.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+.color p {
+    margin: 0;
+    color: crimson;
+}
+
+/* Box shadow */
+.caja-shadow{
+}
+.offsetXY {
+}
+
+.blurRadius {
+}
+
+.spreadRadius {
+}
+
+.color {
+}
+
+.inset {
+}
+
+/* Tipografias */
+
+.font-fa p {
+}
+
+.font-we p {
+}
+
+.font-style {
+}
+
+.font-size {
+}
+
+.letter-spacing {
+}
+
+.word-spacing {
+}
+
+.line-height {
+}
+
+.text-align {
+}
+
+.text-transform {
+}
+
+.text-decoration {
+}
+
+/* Listas */
+
+.list-position {
+}
+
+.list-img {
+}
