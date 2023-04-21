@@ -118,58 +118,84 @@ h4 {
 
 /* Box shadow */
 .caja-shadow{
+    background: #8c54fb;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
 }
 .offsetXY {
+    box-shadow: 10px 10px;
 }
 
 .blurRadius {
+    box-shadow: 10px 10px 5px;
 }
 
 .spreadRadius {
+    box-shadow: 10px 10px 5px 5px;
 }
 
 .color {
+    box-shadow: 10px 10px 5px 5px rgba(170, 144, 144, 0.75);
 }
 
 .inset {
+    box-shadow: inset 10px 10px 5px 5px rgba(170, 144, 144, 0.75);
 }
 
 /* Tipografias */
 
 .font-fa p {
+    font-family: 'Indie Flower';
 }
 
 .font-we p {
+    font-family: 'Indie Flower';
+    font-weight: bold;
 }
 
 .font-style {
+    font-family: 'Indie Flower';
+    font-style: italic;
 }
 
 .font-size {
+    font-family: 'Indie Flower';
+    font-size: 2rem;
 }
 
 .letter-spacing {
+    letter-spacing: 10px;
 }
 
 .word-spacing {
+    word-spacing: 10px;
 }
 
 .line-height {
+    line-height: 55px;
 }
 
 .text-align {
+    text-align: end;
 }
 
 .text-transform {
+    text-transform: uppercase;
 }
 
 .text-decoration {
+    text-decoration: overline;
 }
 
 /* Listas */
 
 .list-position {
+    list-style-type: none;
+    list-style-position: outside;
 }
 
 .list-img {
+    list-style-image: url('./img/messi-list-img.jpg');
+    list-style-position: inside;
 }
