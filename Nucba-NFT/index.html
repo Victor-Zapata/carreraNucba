@@ -14,13 +14,14 @@
       <img src="./assets/img/logo.png" alt="Logo de Nucba NFT" class="logo" />
       <nav class="navbar">
         <ul class="navbar-list">
-          <!-- La redirección de los enlaces lo vemos después -->
+          <!-- La redirección de los enlaces lo vemos despues con animaciones y transiciones -->
           <li><a href="#">Home</a></li>
           <li><a href="#">Descubre</a></li>
           <li><a href="#">BTC</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Contáctanos</a></li>
+          <li><a href="#">Youtube</a></li>
+          <li><a href="#">Contactanos</a></li>
         </ul>
+        <!-- /*Agregamos input y label para el carrito*/ -->
         <img
           src="./assets/img/cart-icon.svg"
           alt="Carrito de compras"
@@ -30,6 +31,7 @@
     </header>
 
     <main>
+      <!-- hero -->
       <section id="hero">
         <div class="hero-info">
           <h1>Descubre la nueva era de Crypto</h1>
@@ -41,17 +43,13 @@
           </p>
           <a href="#">Be Nucber</a>
         </div>
-
         <div class="hero-card">
-            <img src="./assets/img/hero/hero-card.png" alt="BTC de ejemplo" />
+          <img src="./assets/img/hero/hero-card.png" alt="BTC de ejemplo" />
           <div class="hero-card-info">
-            <!-- contenedor 1 -->
             <div class="hero-card-top">
-              <h3>The Greatest of all Time</h3>
+              <h3>"The Greatest of All Time"</h3>
               <span>10</span>
             </div>
-
-            <!-- contenedor 2 -->
             <div class="hero-card-bottom">
               <div class="hero-card-creator">
                 <img
@@ -63,18 +61,118 @@
                   <p>Carles Rexach</p>
                 </div>
               </div>
-
               <div class="hero-card-price">
                 <p>Value</p>
                 <span>9 ETH</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- info -->
+      <section id="info">
+        <h2>Crea, Aprende Y Comparte Los NFTs</h2>
+        <div class="info-cards-container">
+          <div class="info-card">
+            <img src="./assets/img/info/info-icon.png" alt="" />
+            <h3>Configura tu Wallet</h3>
+            <p>
+              Una vez que haya configurado la billetera de su elección,
+              conéctela a OpenSea.
+            </p>
+          </div>
+          <div class="info-card">
+            <img src="./assets/img/info/info-icon.png" alt="" />
+            <h3>Agregá tus NFTs</h3>
+            <p>
+              Una vez que haya configurado la billetera de su elección, busca
+              los NFT de NUCBA y adquiere los que más te gusten.
+            </p>
+          </div>
+          <div class="info-card">
+            <img src="./assets/img/info/info-icon.png" alt="" />
+            <h3>¡Coleccionalos!</h3>
+            <p>
+              A partir de ahora, formás parte de la comunidad de NUCBA NFT y vas
+              a poder acceder a contenidos educativos exclusivos sobre el mundo
+              crypto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- discover -->
+      <section id="discover">
+        <!-- discover info text -->
+        <div class="discover-info">
+          <h2>Descubre una nueva era de colecciones</h2>
+          <div class="discover-text">
+            <p>
+              Tendras la oportunidad de coleccionar NFTs sobre distintos
+              tópicos, y de este modo acceder a beneficios exclusivos por tomar
+              parte de dicho club. Ej: "Team Star Wars"
+            </p>
+            <a href="#">Empezar ahora</a>
+          </div>
+        </div>
+
+        <!-- discover cards -->
+        <div class="discover-cards">
+          <img src="./assets/img/discover/darth-vader.png" alt="darth-vader" />
+          <img src="./assets/img/discover/trooper.png" alt="trooper" />
+          <img src="./assets/img/discover/yoda.png" alt="yoda" />
+        </div>
+      </section>
+
+      <section id="products">
+        <h2>Hot NFTs</h2>
+        <!-- categories -->
+        <div class="categories">
+          <button class="category active">⚽Todas</button>
+          <button class="category">⚽Fútbol</button>
+          <button class="category">⚽Música</button>
+          <button class="category">⚽Películas</button>
+          <button class="category">⚽Autos</button>
+          <button class="category">⚽Políticos</button>
+        </div>
+
+        <!-- products -->
+        <div class="products-container">
+          <!-- product 1 -->
+          <div class="product">
+            <img src="./assets/img/products/goldenmessi.png" alt="Leo Messi Golden">
+            <div class="product-info">
+              <!-- top -->
+              <div class="product-top">
+                <h3>Golden Messi</h3>
+                <p>Current Bid</p>
+              </div>
+
+              <!-- mid -->
+              <div class="product-mid">
+                <div class="product-user">
+                  <img src="./assets/img/user.png" alt="user">
+                  <p>@thetroncous</p>
+                </div>
+                <span>6.89 ETH</span>
+              </div>
+
+              <!-- bot -->
+              <div class="product-bot">
+                <div class="offer-time">
+                  <img src="./assets/img/fire.png" alt="fire">
+                  <p>05:12:07</p>
+                </div>
+                <button class="btn-add">Add</button>
               </div>
 
             </div>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer></footer>
+      </section>
+
+    </main>
   </body>
 </html>
