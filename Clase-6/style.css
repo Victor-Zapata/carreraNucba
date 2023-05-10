@@ -99,17 +99,46 @@
 
 /*  */
 .box {
+    width: 100px;
+    height: 100px;
+    background: var(--rose);
 }
 
 /* positiions */
 .relative {
+    position: relative;
 }
 
 .absolute-container {
+    position: relative;
+    height: 100px;
 }
 
 .absolute {
+    position: absolute;
+    left: 700px;
 }
 
 .fixed {
+    position: fixed;
+    background: blue;
+    bottom: 50px;
+    right: 0px;
+}
+
+
+
+.box {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+}
+
+.punto {
+    background: blue;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    position: absolute;
 }

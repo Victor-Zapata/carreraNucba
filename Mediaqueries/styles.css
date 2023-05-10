@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /* bg colors */
+  --black: #02050e;
+  --grey: #272d37;
+  --white: #f0fbff;
+  --blue: #0c1221;
+  --red: #b21c05;
+  --green: #168208;
+  --yellow: #ffff00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--black);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 90%;
+  width: 90%;
+  background-color: var(--grey);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.caja {
+  width: 200px;
+  height: 200px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fondo (mostramos distintos tipos de gradiente */
+
+.caja1 {
+  /* radial */
+  background: radial-gradient(#f69d3c, #3f87a6);
+  /* repeating */
+  background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+  /* a "x" grados */
+  background: linear-gradient(70deg, black, white);
+  /* hacia una dirección */
+  background: linear-gradient(to left, #d7d2cc, #304352);
+}
+
+/* Texto */
+.caja2 {
+  background: linear-gradient(to right, white, red);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Ambos */
+.caja3 {
+  background: linear-gradient(to right, #0f0c29, #24243e);
+}
+
+.caja3 span {
+  background: linear-gradient(to right, #f12711, #f5af19);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Mediaqueries */
+
+@media (max-width: 1200px) {
+  body {
+    background-color: var(--grey);
+  }
+
+  .container {
+    background-color: var(--black);
+  }
+
+  .caja {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+  .caja {
+    width: 90%;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .caja {
+    background-color: yellow;
+  }
+  .caja1 {
+    border-radius: 0px;
+  }
+  .caja2 {
+    border-radius: 30px;
+  }
+  .caja3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--green);
+  }
+  .caja {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 50px;
+    border: 2px dashed var(--yellow);
+  }
+  .caja1 {
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
+  .caja2 {
+    display: none;
+  }
+}
