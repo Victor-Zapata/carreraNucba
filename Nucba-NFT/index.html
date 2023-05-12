@@ -4,29 +4,124 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--! Agregar Favicon  -->
     <title>NFT Landing</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- mediaqueries -->
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
   </head>
 
   <body>
     <header>
       <img src="./assets/img/logo.png" alt="Logo de Nucba NFT" class="logo" />
       <nav class="navbar">
+        <!-- Agregamos el label con la imagen del menu -->
+        <label for="menu-toggle" class="menu-label">
+          <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+        </label>
+        <!-- Agregamos el input y lo linkeamos al label -->
+        <input type="checkbox" id="menu-toggle" />
+        <!-- Aca arranca el menu -->
         <ul class="navbar-list">
-          <!-- La redirección de los enlaces lo vemos despues con animaciones y transiciones -->
           <li><a href="#">Home</a></li>
           <li><a href="#">Descubre</a></li>
           <li><a href="#">BTC</a></li>
+          <!-- Revisar -->
           <li><a href="#">Youtube</a></li>
           <li><a href="#">Contactanos</a></li>
         </ul>
-        <!-- /*Agregamos input y label para el carrito*/ -->
-        <img
-          src="./assets/img/cart-icon.svg"
-          alt="Carrito de compras"
-          class="cart-icon"
-        />
+        <!-- /Agregamos input y label para el carrito/ -->
+        <label for="cart-toggle" class="cart-label">
+          <img
+            src="./assets/img/cart-icon.svg"
+            alt="Carrito de compras"
+            class="cart-icon"
+          />
+        </label>
+        <input type="checkbox" id="cart-toggle" />
+        <!-- Agregamos el carrito -->
+        <div class="cart">
+          <h2>Tus NFTs</h2>
+
+          <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="Nft del carrito" />
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="Nft del carrito" />
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="Nft del carrito" />
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="Nft del carrito" />
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="Nft del carrito" />
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+
+          <div class="cart-total">
+            <p>Total:</p>
+            <span>18.3 ETH</span>
+          </div>
+          <button class="btn-add">Comprar</button>
+        </div>
       </nav>
     </header>
 
@@ -75,7 +170,7 @@
         <h2>Crea, Aprende Y Comparte Los NFTs</h2>
         <div class="info-cards-container">
           <div class="info-card">
-            <img src="./assets/img/info/info-icon.png" alt="" />
+            <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
             <h3>Configura tu Wallet</h3>
             <p>
               Una vez que haya configurado la billetera de su elección,
@@ -83,7 +178,7 @@
             </p>
           </div>
           <div class="info-card">
-            <img src="./assets/img/info/info-icon.png" alt="" />
+            <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
             <h3>Agregá tus NFTs</h3>
             <p>
               Una vez que haya configurado la billetera de su elección, busca
@@ -91,7 +186,7 @@
             </p>
           </div>
           <div class="info-card">
-            <img src="./assets/img/info/info-icon.png" alt="" />
+            <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
             <h3>¡Coleccionalos!</h3>
             <p>
               A partir de ahora, formás parte de la comunidad de NUCBA NFT y vas
@@ -119,29 +214,32 @@
 
         <!-- discover cards -->
         <div class="discover-cards">
-          <img src="./assets/img/discover/darth-vader.png" alt="darth-vader" />
+          <img src="./assets/img/discover/darth-vader.png" alt="darth vader" />
           <img src="./assets/img/discover/trooper.png" alt="trooper" />
           <img src="./assets/img/discover/yoda.png" alt="yoda" />
         </div>
       </section>
-
+      <!-- products -->
       <section id="products">
         <h2>Hot NFTs</h2>
         <!-- categories -->
         <div class="categories">
-          <button class="category active">⚽Todas</button>
-          <button class="category">⚽Fútbol</button>
-          <button class="category">⚽Música</button>
-          <button class="category">⚽Películas</button>
-          <button class="category">⚽Autos</button>
-          <button class="category">⚽Políticos</button>
+          <button class="category active">🎨Todas</button>
+          <button class="category">⚽Futbol</button>
+          <button class="category">🎷Música</button>
+          <button class="category">🎬Películas</button>
+          <button class="category">🏎️Autos</button>
+          <button class="category">️💼Políticos</button>
         </div>
 
         <!-- products -->
         <div class="products-container">
           <!-- product 1 -->
           <div class="product">
-            <img src="./assets/img/products/goldenmessi.png" alt="Leo Messi Golden">
+            <img
+              src="./assets/img/products/goldenmessi.png"
+              alt="Messi Dorado"
+            />
             <div class="product-info">
               <!-- top -->
               <div class="product-top">
@@ -152,27 +250,190 @@
               <!-- mid -->
               <div class="product-mid">
                 <div class="product-user">
-                  <img src="./assets/img/user.png" alt="user">
+                  <img src="./assets/img/user.png" alt="user" />
                   <p>@thetroncous</p>
                 </div>
-                <span>6.89 ETH</span>
+                <span>6.89 eTH</span>
               </div>
 
               <!-- bot -->
               <div class="product-bot">
                 <div class="offer-time">
-                  <img src="./assets/img/fire.png" alt="fire">
+                  <img src="./assets/img/fire.png" alt="" />
                   <p>05:12:07</p>
                 </div>
                 <button class="btn-add">Add</button>
               </div>
+            </div>
+          </div>
 
+          <!-- product 2-->
+          <div class="product">
+            <img src="./assets/img/products/diego.png" alt="El Diego" />
+            <div class="product-info">
+              <!-- top -->
+              <div class="product-top">
+                <h3>Diego Maradona</h3>
+                <p>Current Bid</p>
+              </div>
+
+              <!-- mid -->
+              <div class="product-mid">
+                <div class="product-user">
+                  <img src="./assets/img/user.png" alt="user" />
+                  <p>@kirik8</p>
+                </div>
+                <span>5.89 eTH</span>
+              </div>
+
+              <!-- bot -->
+              <div class="product-bot">
+                <div class="offer-time">
+                  <img src="./assets/img/fire.png" alt="" />
+                  <p>05:12:07</p>
+                </div>
+                <button class="btn-add">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- product 3 -->
+          <div class="product">
+            <img
+              src="./assets/img/products/beardedmessi.png"
+              alt="Lionel Messi"
+            />
+            <div class="product-info">
+              <!-- top -->
+              <div class="product-top">
+                <h3>L10nel Messi</h3>
+                <p>Current Bid</p>
+              </div>
+
+              <!-- mid -->
+              <div class="product-mid">
+                <div class="product-user">
+                  <img src="./assets/img/user.png" alt="user" />
+                  <p>@FD10S</p>
+                </div>
+                <span>4.89 eTH</span>
+              </div>
+
+              <!-- bot -->
+              <div class="product-bot">
+                <div class="offer-time">
+                  <img src="./assets/img/fire.png" alt="" />
+                  <p>05:12:07</p>
+                </div>
+                <button class="btn-add">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- product 4 -->
+          <div class="product">
+            <img
+              src="./assets/img/products/schumacher.png"
+              alt="Michael schumacher"
+            />
+            <div class="product-info">
+              <!-- top -->
+              <div class="product-top">
+                <h3>M. Schumacher</h3>
+                <p>Current Bid</p>
+              </div>
+
+              <!-- mid -->
+              <div class="product-mid">
+                <div class="product-user">
+                  <img src="./assets/img/user.png" alt="user" />
+                  <p>@Urastream</p>
+                </div>
+                <span>3.67 eTH</span>
+              </div>
+
+              <!-- bot -->
+              <div class="product-bot">
+                <div class="offer-time">
+                  <img src="./assets/img/fire.png" alt="" />
+                  <p>05:12:07</p>
+                </div>
+                <button class="btn-add">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- product 5 -->
+          <div class="product">
+            <img src="./assets/img/products/alonso.png" alt="Fernando Alonso" />
+            <div class="product-info">
+              <!-- top -->
+              <div class="product-top">
+                <h3>Fernando Alonso</h3>
+                <p>Current Bid</p>
+              </div>
+
+              <!-- mid -->
+              <div class="product-mid">
+                <div class="product-user">
+                  <img src="./assets/img/user.png" alt="user" />
+                  <p>@Gulineta</p>
+                </div>
+                <span>4.52 eTH</span>
+              </div>
+
+              <!-- bot -->
+              <div class="product-bot">
+                <div class="offer-time">
+                  <img src="./assets/img/fire.png" alt="" />
+                  <p>05:12:07</p>
+                </div>
+                <button class="btn-add">Add</button>
+              </div>
+            </div>
+          </div>
+          <!-- product 6 -->
+          <div class="product">
+            <img
+              src="./assets/img/products/toretto.png"
+              alt="Dominic Toretto"
+            />
+            <div class="product-info">
+              <!-- top -->
+              <div class="product-top">
+                <h3>Toretto</h3>
+                <p>Current Bid</p>
+              </div>
+
+              <!-- mid -->
+              <div class="product-mid">
+                <div class="product-user">
+                  <img src="./assets/img/user.png" alt="user" />
+                  <p>@HardBena</p>
+                </div>
+                <span>7.33 eTH</span>
+              </div>
+
+              <!-- bot -->
+              <div class="product-bot">
+                <div class="offer-time">
+                  <img src="./assets/img/fire.png" alt="" />
+                  <p>05:12:07</p>
+                </div>
+                <button class="btn-add">Add</button>
+              </div>
             </div>
           </div>
         </div>
-
+        <button class="btn-load">Ver Más</button>
       </section>
-
     </main>
+    <footer>
+      <div>
+        <ul class="footer-links">
+          <li><a href="#">Términos de Uso</a></li>
+          <li><a href="#">Trabajá con Nosotros</a></li>
+          <li><a href="#">Soporte</a></li>
+        </ul>
+      </div>
+      <p>Hecho con ❤️ en <span>NUCBACRYPTO</span></p>
+    </footer>
   </body>
 </html>

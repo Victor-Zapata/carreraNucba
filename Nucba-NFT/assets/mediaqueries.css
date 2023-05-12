@@ -1,0 +1,207 @@
+/* Tablet */
+@media (max-width: 992px) {
+    .navbar {
+        gap: 10px;
+    }
+
+    .cart-icon {
+        height: 33px;
+        margin-right: 0rem;
+        margin-top: 4px;
+    }
+
+    .navbar-list {
+        position: absolute;
+        top: 65px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        border: 2px solid var(--electric);
+        border-top: none;
+        border-radius: 0px 0px 15px 15px;
+        align-items: center;
+        padding: 45px 30px;
+        gap: 25px;
+        z-index: 2;
+        display: none;
+    }
+
+    .navbar-list a {
+        font-size: 18px;
+    }
+
+    /* Mostrar el ícono del menú */
+    .menu-label {
+        display: flex;
+        order: 2;
+        cursor: pointer;
+    }
+
+    .menu-label img {
+        height: 20px;
+        width: 25px;
+    }
+
+    #menu-toggle:checked + .navbar-list {
+        display: flex;
+    }
+    
+    /* Hero */
+
+    .hero-info {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hero-info h1 {
+        width: 90%;
+        max-width: 500px;
+        min-width: unset;
+    }
+
+    .hero-info p {
+        width: 60%;
+        max-width: 600px;
+    }
+
+    .hero-card {
+        display: none;
+    }
+
+    /* info */
+    #info h2 {
+        text-align: center;
+        width: 80%;
+    }
+
+    .info-cards-container {
+        max-width: 80%;
+    }
+
+    /* discover */
+    #discover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .discover-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discover-cards {
+        flex-direction: column;
+    }
+
+    .discover-cards img {
+        width: 100%;
+    }
+
+    /* products */
+    .categories {
+        flex-wrap: wrap;
+        max-width: 390px;
+    }
+
+    .category {
+        width: 120px;
+    }
+}
+
+/* Celu */
+@media (max-width: 576px) {
+    /* modificar el carrito para celu */
+    .cart {
+        left: 0;
+        width: 100%;
+        border: none;
+    }
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    /* hero */
+    .hero-info p {
+        width: 70%;
+        max-width: unset;
+    }
+
+    /* info */
+    .info-cards-container {
+        gap: 30px;
+    }
+
+    .info-card {
+        width: 100%;
+        height: 350px;
+        justify-content: center;
+    }
+
+    .info-card p {
+        width: 90%;
+    }
+
+    /* discover */
+    #discover {
+        width: 80%;
+    }
+
+    #discover h2 {
+        width: 100%;
+        font-size: 48px;
+    }
+
+    .discover-text {
+        width: 100%;
+        padding: 10px;
+        line-height: 30px;
+        gap: 50px;
+    }
+
+    .discover-text a {
+        font-size: 20px;
+    }
+
+    .discover-cards {
+        gap: 30px;
+    }
+
+    .discover-cards img {
+        width: 100%;
+    }
+
+    /* products */
+    .categories {
+        max-width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category {
+        width: 120px;
+    }
+
+    .products-container {
+        width: 80%;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    /* footer */
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+

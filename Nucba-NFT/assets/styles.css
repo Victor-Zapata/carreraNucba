@@ -40,8 +40,7 @@ header {
   align-items: center;
   height: 65px;
   padding: 0px 30px 0px 30px;
-  /*Para fixear en el top de la página*/
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 2; /* Para que se vea siempre por encima */
 }
@@ -245,7 +244,6 @@ main {
   flex-wrap: wrap;
   gap: 20px;
 }
-
 .info-card {
   width: 300px;
   height: 290px;
@@ -305,7 +303,6 @@ main {
   font-weight: 300;
   color: var(--text-gray);
 }
-
 .discover-text a {
   color: var(--text-white);
   font-weight: 600;
@@ -323,7 +320,7 @@ main {
   width: 30%;
 }
 
-/* Products section */
+/* Products Section */
 #products {
   display: flex;
   flex-direction: column;
@@ -390,8 +387,8 @@ main {
   gap: 20px;
 }
 
-.product-top, 
-.product-mid, 
+.product-top,
+.product-mid,
 .product-bot {
   display: flex;
   justify-content: space-between;
@@ -402,7 +399,6 @@ main {
   font-size: 16px;
   font-weight: 600;
 }
-
 .product-top p,
 .product-user p {
   font-size: 16px;
@@ -420,6 +416,12 @@ main {
   font-weight: 800;
 }
 
+.product-offer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .offer-time {
   display: flex;
   gap: 10px;
@@ -435,7 +437,193 @@ main {
   background: var(--primary);
   border: none;
   padding: 10px 35px;
-  color: var(--text-white);
+  color: var(--bg-white);
   border-radius: 10px;
   cursor: pointer;
+}
+
+.btn-load {
+  background: none;
+  border: 1px solid var(--electric);
+  padding: 10px 35px;
+  color: var(--bg-white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background: var(--background);
+  color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+footer a,
+footer p {
+  color: var(--text-gray);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+footer span {
+  font-weight: 800;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* GRADIENTES */
+
+header {
+  background: linear-gradient(to bottom, #121e3c, var(--background) );
+}
+
+.hero-info h1 {
+  background: linear-gradient(to top, #30cfd0, #c43ad6);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* /-----------------------------OCULTAR HAMBURGUESA Y CHECKBOX--------------------------------/ */
+#menu-toggle,
+#cart-toggle,
+.menu-label {
+  display: none;
+}
+
+/* /-----------------------------CARRITO--------------------------------/ */
+.cart {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  padding: 50px 30px;
+  background: linear-gradient(to top, #121e3c, var(--background));
+  border-left: 1px solid var(--nav-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: calc(100vh - 65px);
+  overflow-y: scroll;
+  display: none;
+  z-index: 2;
+}
+
+/* /OCULTAR BARRA DE SCROLL DEL CARRITO/ */
+
+.cart::-webkit-scrollbar {
+  display: none;
+}
+
+.cart h2 {
+  color: var(--text-white);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #2323234e;
+  padding: 20px;
+  border: 1px solid var(--electric);
+  border-radius: 10px;
+}
+
+.cart-item img {
+  height: 65px;
+  width: 65px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.item-bid {
+  color: var(--text-gray);
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.item-price {
+  background: linear-gradient(to right, #30cfd0, #c43ad6);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.item-handler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quantity-handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: var(--text-white);
+  font-weight: 400;
+}
+
+.item-quantity {
+  color: var(--text-gray);
+}
+
+.up {
+  border: 1px solid var(--electric);
+}
+
+.down {
+  background-color: var(--secondary);
+  border: 1px solid var(--electric);
+}
+
+.divider {
+  margin-top: 20px;
+  border: 0.5px solid var(--electric);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cart-total p {
+  color: var(--text-white);
+  font-weight: 700;
+}
+
+.cart-total span {
+  color: var(--text-white);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* /Toggle del carro/ */
+#cart-toggle:checked + .cart {
+  display: flex;
 }
