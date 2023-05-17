@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo-nucba.png" />
+
+    <!-- Estilos base de la página que usamos como template -->
+    <link rel="stylesheet" href="base.css" />
+    <!-- Estilos de la clase -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>CSS - PseudoElementos/Clases</title>
+  </head>
+
+  <body>
+    <h1>
+      1.12 PseudoClases/Elementos
+      <img src="./img/logo-nucba.png" alt="logo" class="logo" />
+    </h1>
+    <hr class="hr" />
+
+    <!--------------------------- Pseudoclases ----------------------------->
+    <!--------------------------- Hover ----------------------------->
+
+    <h2>Hover</h2>
+
+    <div class="container">
+      <a href="#" class="hover">Pasame el mouse por encima</a>
+    </div>
+    
+
+    <hr class="hr" />
+
+    <!--------------------------- Active | Link | Visited ----------------------------->
+
+    <h2>Active | Link | Visited</h2>
+
+    <span class="text-span">👉 active</span>
+   
+    <div class="container">
+      <a href="#" class="active">nucba.com.ar</a>
+    </div>
+
+
+
+    <span class="text-span">👉 visited</span>
+
+   
+    <div class="container">
+      <a href="https://www.nucba.com.ar/" class="visited" target="_blank">Visited</a>
+    </div>
+
+
+    <span class="text-span">👉 link</span>
+
+      
+    <div class="container">
+      <a href="nucba.com" class="link">nucba.com.ar.co</a>
+      <a href="https://www.nucba.com.ar/" class="visited" target="_blank">Visited</a>
+    </div>
+
+
+
+
+    <hr class="hr" />
+    <!--------------------------- Focus ----------------------------->
+    <h2>Focus</h2>
+
+    
+    <div class="container">
+      <input type="text" class="focus-input" placeholder="Ingresa tu nombre">
+    </div>
+
+
+    <!--------------------------- Childs ----------------------------->
+    <h2>Childs</h2>
+
+    <span class="text-span">👉 first-child</span>
+    
+
+    <div class="container first">
+      <div class="caja">1</div>
+      <div class="caja">2</div>
+      <div class="caja">3</div>
+      <div class="caja">4</div>
+    </div>
+
+
+    <span class="text-span">👉 last-child</span>
+    
+    
+
+    <div class="container last">
+      <div class="caja">1</div>
+      <div class="caja">2</div>
+      <div class="caja">3</div>
+      <div class="caja">4</div>
+    </div>
+
+
+
+    <span class="text-span">👉 first of type</span>
+    
+
+    <div class="container first-of-type">
+      <div class="caja">1</div>
+      <div class="caja">2</div>
+      <span class="caja">3</span>
+      <span class="caja">4</span>
+      <section class="caja">5</section>
+    </div>
+
+
+
+    <span class="text-span">👉 nth-child(odd)</span>
+    
+    
+    <div class="container nth-child-odd">
+      <div class="caja">1</div>
+      <div class="caja">2</div>
+      <span class="caja">3</span>
+      <span class="caja">4</span>
+    </div>
+
+
+
+    <span class="text-span">👉 nth-child(even)</span>
+    
+
+    <div class="container nth-child-even">
+      <div class="caja">1</div>
+      <div class="caja">2</div>
+      <span class="caja">3</span>
+      <span class="caja">4</span>
+    </div>
+
+
+
+
+    <span class="text-span">👉 nth-child(number)</span>
+    
+
+    <div class="container nth-child-number">
+      <div class="caja">1</div>
+      <div class="caja">2</div>
+      <div class="caja">3</div>
+      <div class="caja">4</div>
+    </div>
+
+
+  <span class="text-span">👉 nth-child(n)</span>
+
+  <div class="container nth-child-n">
+    <div class="caja">1</div>
+    <div class="caja">2</div>
+    <div class="caja">3</div>
+    <div class="caja">4</div>
+    <div class="caja">5</div>
+    <div class="caja">6</div><div class="caja">3</div>
+    <div class="caja">7</div>
+  </div>
+
+
+    <span class="text-span">👉 nth-child(number n + number)</span>
+   
+
+    <div class="container nth-child-number-n">
+      <div class="caja">1</div>
+      <div class="caja">2</div>
+      <div class="caja">3</div>
+      <div class="caja">4</div>
+      <div class="caja">5</div>
+      <div class="caja">6</div><div class="caja">3</div>
+      <div class="caja">7</div>
+    </div>
+
+
+
+    <hr class="hr" />
+    <!--------------------------- Pseudoelementos ----------------------------->
+    <h2>Pseudoelementos</h2>
+    <span class="text-span">👉 First letter</span>
+
+    <div class="container">
+      <p class="first-letter">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus obcaecati aut hic delectus impedit tempora magnam? Explicabo repudiandae tempora quidem, a earum pariatur, in delectus, suscipit quasi minima laborum voluptate?
+      </p>
+
+    </div>
+
+
+
+
+
+    <span class="text-span">👉 First line</span>
+
+    <div class="container">
+      <p class="first-line">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus obcaecati aut hic delectus impedit tempora magnam? Explicabo repudiandae tempora quidem, a earum pariatur, in delectus, suscipit quasi minima laborum voluptate?
+      </p>
+
+    </div>
+
+
+
+
+    <span class="text-span">👉 before</span>
+
+    
+
+    <div class="container">
+      <p class="before">Hola, tengo un before</p>
+    </div>
+
+
+
+    <span class="text-span">👉 after</span>
+
+    <div class="container">
+      <p class="after">Hola, tengo un after</p>
+    </div>
+
+
+
+    <span class="text-span">👉 placeholder</span>
+
+    <div class="container">
+      <input type="text" class="input-placeholder" placeholder="Soy un  placeholder">
+    </div>
+
+
+
+    
+  </body>
+</html>

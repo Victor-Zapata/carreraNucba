@@ -1,0 +1,146 @@
+/* Estilos de la clase */
+
+.container {
+    background-color: #282828;
+    display: flex;
+    padding: 16px;
+    border-radius: 16px;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.text-span {
+    color: #ff005c;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hover {
+    background: crimson;
+    padding: 10px;
+    border-radius: 1rem;
+    transition: all 5s ease; /*lo vemos la clase que viene*/
+}
+
+.hover:hover {
+    background: #8c54fb;
+    transition: all 0.3s ease;
+}
+
+/* active */
+.active:active {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+/* visited */
+.visited:visited {
+    color: #8c54fb;
+}
+
+/* link */
+.link:link {
+    color: crimson;
+}
+
+/* focus */
+
+.focus-input {
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+}
+
+.focus-input:focus {
+    background: crimson;
+}
+
+/* Cajas */
+.flex {
+    display: flex;
+}
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* first-child */
+.first .caja:first-child {
+    background: #8c54fb;
+}
+
+/* last-child */
+.last .caja:last-child {
+    background: #8c54fb;
+}
+
+/* first-of-type  */
+.first-of-type .caja:first-of-type {
+    background: #8c54fb;
+}
+
+/* nth-child odd*/
+.nth-child-odd .caja:nth-child(odd) {
+    background: #8c54fb;
+}
+
+/* nth-child even */
+.nth-child-even .caja:nth-child(even) {
+    background: #8c54fb;
+}
+
+/* nth-child-number  */
+.nth-child-number .caja:nth-child(3) {
+    background: #8c54fb;
+}
+
+/* nth-child-n */
+.nth-child-n .caja:nth-child(2n) {
+    background: #8c54fb;
+}
+
+/* nth-child-number-n */
+.nth-child-number-n .caja:nth-child(2n + 3) {
+    background: #8c54fb;
+}
+
+/* first-letter */
+.first-letter::first-letter {
+    color: crimson;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+/* first-line */
+.first-line::first-line {
+    color: crimson;
+}
+
+/* before */
+.before::before {
+    content: '😁 ';
+}
+
+/* after */
+.after::after {
+    content: ' 😔';
+}
+
+/* placeholder */
+.input-placeholder {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 10px;
+    background-color: rgb(105, 104, 104);
+}
+
+.input-placeholder::placeholder {
+    color: red;
+}
