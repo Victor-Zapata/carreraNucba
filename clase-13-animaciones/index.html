@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./logo-nucba.png" />
+
+  <!-- Estilos base de la página que usamos como template -->
+  <link rel="stylesheet" href="base.css" />
+  <!-- Estilos de la clase -->
+  <link rel="stylesheet" href="style.css" />
+
+  <title>CSS - Animaciones y transiciones</title>
+</head>
+
+<body>
+  <h1>
+    1.13 Animaciones y Transiciones
+    <img src="./img/logo-nucba.png" alt="logo" class="logo" />
+  </h1>
+  <hr class="hr" />
+
+  <!--------------------------- Transformaciones ----------------------------->
+
+  <h2>Transformaciones: translate</h2>
+
+  <span class="text-span">👉 transform: translateX() </span>
+
+  <div class="container">
+    <div class="caja translateX">Translate X</div>
+  </div>
+
+  <span class="text-span">👉 transform: translateY() </span>
+
+  <div class="container">
+    <div class="caja translateY">Translate Y</div>
+  </div>
+
+  <span class="text-span">👉 transform: translate() </span>
+
+  <div class="container">
+    <div class="caja translate">Translate</div>
+  </div>
+
+  <hr class="hr" />
+
+  <h2>Transformaciones: rotate</h2>
+
+  <div class="container">
+    <div class="caja rotate">+360º</div>
+    <div class="caja rotate-negative">-360º</div>
+  </div>
+
+  <hr class="hr" />
+
+  <h2>Transformaciones: scale</h2>
+
+  <div class="container">
+    <div class="caja scaleX">Eje X</div>
+    <div class="caja scaleY">Eje Y</div>
+    <div class="caja scale">Ambos</div>
+  </div>
+
+  <hr class="hr" />
+
+  <h2>Transformaciones: skew</h2>
+
+  <div class="container">
+
+    <div class="caja skewX">Eje X</div>
+    <div class="caja skewY">Eje Y</div>
+    <div class="caja skew">Ambos</div>
+  </div>
+
+  <hr class="hr" />
+
+  <!--------------------------- Transiciones ----------------------------->
+
+  <h2>Transiciones</h2>
+
+  <h3>Propiedades de las transiciones</h3>
+
+  <span class="text-span">👉 transition-property </span>
+
+  <p class="code">transition-property: all | none | propiedad css</p>
+
+  <span class="text-span">👉 transition-duration </span>
+
+  <p class="code">transition-duration: 0 | 0.5s</p>
+
+  <div class="container">
+    <div class="caja transition-duration">Duration</div>
+  </div>
+
+  <span class="text-span">👉 transition-timing-function</span>
+
+  <p class="code">transition-timing-function: ease | ease-in | ease-out</p>
+
+  <div class="container">
+    <div class="caja transition-timing">transition-timing-function</div>
+  </div>
+
+  <span class="text-span">👉 transition-delay</span>
+
+  <p class="code">transition-delay: 1s</p>
+
+  <div class="container">
+    <div class="caja transition-delay">Delay: 1s</div>
+  </div>
+
+  <span class="text-span">👉 transition shorthand</span>
+
+  <p class="code">transition: all 2s 1s ease;</p>
+
+  <div class="container">
+    <div class="caja transition-shorthand">Transition shorthand</div>
+  </div>
+
+  <!--------------------------- Animaciones ----------------------------->
+
+  <h2>Animaciones</h2>
+  <h3>Pasos para crear una animación</h3>
+
+  <span class="text-span">👉 1 - Colocamos una caja sin animar</span>
+
+  <div class="container">
+    <div class="caja">Caja sin animar</div>
+  </div>
+
+  <span class="text-span">👉 2 - Creamos "moverCaja" y la aplicamos dandole una duración</span>
+
+  <div class="container">
+    <div class="caja animada">Caja animada</div>
+  </div>
+
+  <span class="text-span">👉 3 - Convertimos la animación en infinita</span>
+
+  <div class="container">
+    <div class="caja animada infinita">Caja animada</div>
+  </div>
+
+  <span class="text-span">👉 4 - Hacemos que la animación alterne su dirección</span>
+
+  <div class="container">
+    <div class="caja animada infinita alternada">Caja animada</div>
+  </div>
+
+  <span class="text-span">👉 5 - Le agregamos un delay (Solo aplica a la primera iteración)</span>
+
+  <div class="container">
+    <div class="caja animada infinita alternada delay">Caja animada</div>
+  </div>
+
+  <span class="text-span">👉 6 - Le agregamos una timing function</span>
+
+  <div class="container">
+    <div class="caja animada infinita alternada delay timing">Caja animada</div>
+  </div>
+
+  <span class="text-span">👉 7 - Le cambiamos el estado en hover</span>
+
+  <div class="container">
+    <div class="caja animada infinita alternada delay timing paused">Caja animada</div>
+  </div>
+
+  <span class="text-span">👉 8 - Hacemos todo lo anterior con el shorthand animation</span>
+
+  <div class="container">
+    <div class="caja animation-shorthand">Caja animada</div>
+  </div>
+
+</body>
+
+</html>
