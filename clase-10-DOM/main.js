@@ -37,7 +37,43 @@
 //     pTag.textContent = 'Hola desde el DOM'
 // })
 
-const cliqueame = document.getElementById('cliqueame');
+// const cliqueame = document.getElementById('cliqueame');
 // cliqueame.addEventListener('click', () => {
 //     alert('hola');
 // })
+
+
+//en primer lugar, capturo los elementos del DOM que voy a necesitar para darle funcionalidad a mi app
+const form = document.getElementById('form');
+const caja = document.getElementById('caja');
+const input = document.getElementById('input');
+
+let items = [];
+
+const renderItems = () => {
+    caja.innerHTML = items.map((item) => {
+        return `
+        <p>${item}</p>
+        `
+    }).join('');
+};
+
+const submitHandler = (e) => {
+    //prevengo la acción por defecto para que no se refresque el navegador y perdamos el valor del input
+    e.preventDefault();
+    //guardo el valor del input en una variable
+    let item = input.value;
+    //hago una copia de mi array de tareas y le voy agregando la tarea nueva
+    items = [
+        ...items,
+        item
+    ];
+    input.value = '';
+    renderItems();
+};
+
+//el segundo paso suele ser armar nuestra función inicializadora
+const init = () => {
+    form.addEventListener('submit', submitHandler)
+};
+init();
