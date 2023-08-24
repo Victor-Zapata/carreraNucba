@@ -82,16 +82,33 @@ const removeAll = () => {
   toggleDeleteAllButton();
 }
 
-const init = () => {
-  //ejecutar renderTaskList en el evento DOMContentLoaded
-  document.addEventListener('DOMContentLoaded', renderTaskList);
-  document.addEventListener('DOMContentLoaded', toggleDeleteAllButton);
-  addForm.addEventListener('submit', addTask);
-  tasksContainer.addEventListener('click', removeTask);
-  deleteAllBtn.addEventListener('click', removeAll);
+// const init = () => {
+//   //ejecutar renderTaskList en el evento DOMContentLoaded
+//   document.addEventListener('DOMContentLoaded', renderTaskList);
+//   document.addEventListener('DOMContentLoaded', toggleDeleteAllButton);
+//   addForm.addEventListener('submit', addTask);
+//   tasksContainer.addEventListener('click', removeTask);
+//   deleteAllBtn.addEventListener('click', removeAll);
+// };
+
+
+
+// //ejecutar la función init
+// init();
+
+const hola = () => {
+  console.log('hola');
 };
 
+const chau = () => {
+  console.log('chau');
+};
+
+const taLuego = () => {
+  const nosVemos = () => {
+    console.log('nosvemos');
+  }
+  nosVemos()
+}
 
 
-//ejecutar la función init
-init();

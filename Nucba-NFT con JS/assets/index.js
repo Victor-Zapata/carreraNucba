@@ -13,6 +13,9 @@ const overlay = document.querySelector(".overlay");
 const productsCart = document.querySelector(".cart-container");
 const total = document.querySelector(".total");
 const successModal = document.querySelector(".add-modal");
+const buyBtn = document.querySelector(".btn-buy");
+const deleteBtn = document.querySelector(".btn-delete");
+const cartBubble = document.querySelector(".cart-bubble");
 
 //función para renderizar una lista de productos
 
@@ -307,8 +310,26 @@ const showSuccessModal = (msg) => {
 };
 
 //creamos un objeot con la info del producto que queremos agregar
-const createCartProduct = ( product ) => {
+const createCartProduct = (product) => {
     cart = [...cart, { ...product, quantity: 1 }];
+};
+
+//habilitar o deshabilitar un botón según corresponda
+//La lógica la comparten, si el carro está vacío, los saco a ambos, si hay algo en el cart los habilito
+const disableBtn = (btn) => {
+    if (!cart.length) {
+        btn.classList.add("disabled");
+    } else {
+        btn.classList.remove("disabled");
+    }
+};
+
+//Función para actualizar la cantidad de productos que el usuario va guardando en el carrito
+const renderCartBubble = () => {
+    //acá tenemos que mostrar la suma de los quantitis, por lo tanto aplico un método que se llama reduce
+    cartBubble.textContent = cart.reduce((acc, cur) => {
+        return acc + cur.quantity;
+    }, 0);
 };
 
 //función de actualización del carro
@@ -319,11 +340,114 @@ const updateCartState = () => {
     renderCart();
     //mostrar el total
     showCartTotal();
-    
+
+    //usamos la misma fnc para ambos botones
+    disableBtn(buyBtn);
+    disableBtn(deleteBtn);
+
+    renderCartBubble();
+
 };
+
+/**
+ * Función para manejar el evento click del botón de más de cada producto del carrito.
+ */
+const handlePlusBtnEvent = (id) => {
+    const existingCartProduct = cart.find((item) => item.id === id);
+    addUnitToProduct(existingCartProduct);
+  };
+
+/**
+ * Función para manejar el evento click del botón de menos de cada producto del carrito.
+ */
+const handleMinusBtnEvent = (id) => {
+    const existingCartProduct = cart.find((item) => item.id === id);
+  
+    // Si se toco en un item con uno solo de cantidad
+    if (existingCartProduct.quantity === 1) {
+      if (window.confirm("¿Desea Eliminar el producto del carrito?")) {
+        removeProductFromCart(existingCartProduct);
+      }
+      return; // Si no termino confirmando la eliminación, no hace nada, ya que sino la cantidad quedaría en 0, así que cortamos la ejecución.
+    }
+    substractProductUnit(existingCartProduct);
+  };
+
+/**
+ * Función para quitar una unidad de producto.
+ * Se recorre el array del carrito y se busca el producto que se quiere eliminar una unidad. Si el producto pasado como parámetro es igual al producto que se está recorriendo, se le resta una unidad a la propiedad "quantity" y se actualiza el array del carrito. Si eso no ocurre, se retorna el producto que se esta recorriendo tal cual está.
+ */
+const substractProductUnit = (existingProduct) => {
+    cart = cart.map((product) => {
+      return product.id === existingProduct.id
+        ? { ...product, quantity: Number(product.quantity) - 1 }
+        : product;
+    });
+  };
+
+/**
+ * Función para eliminar un producto del carrito.
+ */
+const removeProductFromCart = (existingProduct) => {
+    cart = cart.filter((product) => product.id !== existingProduct.id);
+    updateCartState();
+  };
+
+/**
+ * Función que maneja los eventos de apretar el botón de más o de menos según corresponda.
+ */
+const handleQuantity = (e) => {
+    if (e.target.classList.contains("down")) {
+      handleMinusBtnEvent(e.target.dataset.id);
+    } else if (e.target.classList.contains("up")) {
+      handlePlusBtnEvent(e.target.dataset.id);
+    }
+    //Para todos los casos
+    updateCartState();
+  };
+  
+
+/**
+ * Función para vaciar el carrito.
+ */
+const resetCartItems = () => {
+    cart = [];
+    updateCartState();
+  };
+
+/**
+ * Función para completar la compra o vaciar el carrito.
+ */
+const completeCartAction = (confirmMsg, successMsg) => {
+    if (!cart.length) return; //Si el carrito está vacío, no hace nada.
+    if (window.confirm(confirmMsg)) {
+      resetCartItems();
+      alert(successMsg);
+    }
+  };
+
+/**
+ * Función para disparar el mensaje de compra exitosa y su posterior mensaje de exito en caso de darse la confirmación.
+ */
+const completeBuy = () => {
+    completeCartAction("¿Desea completar su compra?", "¡Gracias por su compra!");
+  };
+  
+
+/**
+ * Función para disparar el mensaje de vaciado de carrito y su posterior mensaje de exito en caso de darse la confirmación.
+ */
+const deleteCart = () => {
+    completeCartAction(
+      "¿Desea vaciar el carrito?",
+      "No hay productos en el carrito"
+    );
+  };
+  
 
 //función inicializadora
 const init = () => {
+
     renderProducts(appState.products[0]);
     showMoreBtn.addEventListener("click", showMoreProducts);
     categoriesContainer.addEventListener("click", applyFilter);
@@ -335,5 +459,12 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", renderCart);
     document.addEventListener("DOMContentLoaded", showCartTotal);
     productsContainer.addEventListener("click", addProduct);
+    productsCart.addEventListener("click", handleQuantity);
+    buyBtn.addEventListener("click", completeBuy);
+    deleteBtn.addEventListener("click", deleteCart);
+    disableBtn(buyBtn);
+    disableBtn(deleteBtn);
+    renderCartBubble(cart);
 };
 init();
+
