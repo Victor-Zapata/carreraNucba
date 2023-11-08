@@ -9,6 +9,20 @@ export const StyledContainer = styled.div`
     padding: 2rem;
     border-radius: 10px;
     margin-top: 15px;
+
+    & h3 {
+        background-color: steelblue;
+        padding: 2rem;
+    }
+
+    & h3:hover {
+        background: crimson;
+    }
+
+    :hover {
+        border: 1px solid crimson;
+    }
+
 `;
 
 export const StyledH4 = styled.h4`
@@ -17,6 +31,23 @@ color: #4747ff;
 `;
 
 export const StyledP = styled.p`
-font-size: 1.2rem;
+font-size: 2.5rem;
 color: crimson ;
+`
+export const PHeredado = styled(StyledP) `
+    color: #4747ff;
+    border: 1px solid crimson;
+
+    &:hover {
+        border: 1px solid #4747ff;
+    }
+
+`
+export const StyledButton = styled.button `
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: ${({color}) => (color ? '#4747ff' : 'crimson')};
+    color: ${({color}) => (color ? 'white' : '4747ff')};
+    width: ${(props) => (props.width ? props.width : '145px')};
 `
