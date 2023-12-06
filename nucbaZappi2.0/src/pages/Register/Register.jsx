@@ -19,7 +19,6 @@ const Register = () => {
           <LoginInput type='text' placeholder='Nombre' />
           <LoginInput type='text' placeholder='Email' />
           <LoginInput type='password' placeholder='Password' />
-         
           <LoginEmailStyled to='/login'>
             <p>¿Ya tenes cuenta? Inicia sesión</p>
           </LoginEmailStyled>

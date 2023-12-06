@@ -7,8 +7,10 @@ import Submit from '../../components/UI/Submit/Submit';
 
 import {
   Form,
+  LoginButtonGoogleStyled,
   LoginContainerStyled,
   LoginEmailStyled,
+  LoginPasswordStyled,
 } from './LoginStyles';
 
 const Login = () => {
@@ -19,8 +21,6 @@ const Login = () => {
         <Form>
           <LoginInput type='text' placeholder='Email' />
           <LoginInput type='password' placeholder='Password' />
-          <Link to='/forgot-password'>
-          </Link>
           <Link to='/register'>
             <LoginEmailStyled>¿No tenes cuenta? Crea una</LoginEmailStyled>
           </Link>
